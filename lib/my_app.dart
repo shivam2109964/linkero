@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linkero/view/home/home.dart';
+import 'package:linkero/model/router.dart';
+import 'package:linkero/view/welcome/welcome.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: const Home(),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const Welcome(),
     );
   }
 }
