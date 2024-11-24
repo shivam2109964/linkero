@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linkero/model/constant/color.dart';
 import 'package:linkero/model/constant/fonts.dart';
+import 'package:linkero/view/home/home.dart';
 import 'package:linkero/view/welcome/animations/ani_controller';
 
 class Welcome extends StatelessWidget {
@@ -65,7 +66,9 @@ class Welcome extends StatelessWidget {
             ),
             MaterialButton(
               padding: EdgeInsets.zero,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Home.routeName);
+              },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.08,
                 width: MediaQuery.of(context).size.width * 0.5,
