@@ -23,16 +23,12 @@ class _LinkOpenState extends State<LinkOpen> {
               Container(
                 height: MediaQuery.of(context).size.height * 0.5,
                 width: MediaQuery.of(context).size.width * 0.9,
-                decoration: BoxDecoration(
-                  color: AppColors.grayColor,
+                decoration: const BoxDecoration(
+                  color: Colors.transparent,
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: Text(
-                    "Rive",
-                    style: AppFonts.montserratDesign(
-                        fontSize: 36, color: Colors.grey.shade500),
-                  ),
+                  child: Image.asset("assets/final/2.png"),
                 ),
               ),
               MaterialButton(

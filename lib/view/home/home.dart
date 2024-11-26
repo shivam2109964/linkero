@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.06,
                     ),
-                    const HomeAnimation(),
+                    const ImageCarousel(),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.03,
                     ),
@@ -138,26 +138,8 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.all(20),
-                      height: MediaQuery.of(context).size.height * 0.08,
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: AppColors.yellowColor,
-                        border: Border.all(
-                          color: AppColors.yellowBorder,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Next",
-                          style: AppFonts.poppinsDesign(
-                            fontSize: 25,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
+                    const SizedBox(
+                      height: 50,
                     ),
                     const HomeAnimation2(),
                     Row(
@@ -244,6 +226,7 @@ class _HomeState extends State<Home> {
             child: Wrap(
               children: [
                 NavigationBar(
+                  indicatorColor: AppColors.yellowColor,
                   selectedIndex: index,
                   onDestinationSelected: (index) {
                     BlocProvider.of<BottomNavBloc>(context).add(
@@ -253,11 +236,17 @@ class _HomeState extends State<Home> {
                   labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
                   destinations: const [
                     NavigationDestination(
-                      icon: Icon(Icons.home),
+                      icon: Icon(
+                        Icons.home,
+                        color: Colors.black,
+                      ),
                       label: "Home",
                     ),
                     NavigationDestination(
-                      icon: Icon(Icons.bolt),
+                      icon: Icon(
+                        Icons.bolt,
+                        color: Colors.black,
+                      ),
                       label: "link",
                     )
                   ],

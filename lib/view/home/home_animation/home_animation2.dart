@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:linkero/model/constant/color.dart';
-import 'package:linkero/model/constant/fonts.dart';
 
 class HomeAnimation2 extends StatelessWidget {
   const HomeAnimation2({super.key});
@@ -10,16 +8,8 @@ class HomeAnimation2 extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height * 0.65,
       width: MediaQuery.of(context).size.width,
-      color: AppColors.grayColor,
-      child: Center(
-        child: Text(
-          "Rive",
-          style: AppFonts.montserratDesign(
-            fontSize: 45,
-            color: Colors.grey,
-          ),
-        ),
-      ),
+      color: Colors.transparent,
+      child: Center(child: Image.asset("assets/final/connect.png")),
     );
   }
 }
