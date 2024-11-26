@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:linkero/model/constant/color.dart';
 import 'package:linkero/model/constant/fonts.dart';
 import 'package:linkero/view/home/home.dart';
-import 'package:linkero/view/welcome/animations/ani_controller';
+import 'package:linkero/view/welcome/animations/ani_controller.dart';
 
 class Welcome extends StatelessWidget {
   static const String routeName = "/Welcome-page";
@@ -55,7 +55,7 @@ class Welcome extends StatelessWidget {
                 )
               ],
             ),
-            const WelcomeAnimation1(),
+            const AniController(),
             Text(
               "Linkero",
               style: AppFonts.montserratDesign(
